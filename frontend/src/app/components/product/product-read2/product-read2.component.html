@@ -1,0 +1,92 @@
+<div class="mat-elevation-z8">
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+      <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+    </ng-container>
+
+     <!-- Name Column -->
+     <ng-container matColumnDef="numero_registro">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Numero registro</th>
+      <td mat-cell *matCellDef="let row">{{row.numero_registro}}</td>
+    </ng-container>
+
+     <!-- Name Column -->
+     <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+      <td mat-cell *matCellDef="let row">{{row.email}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>telefone residencial</th>
+      <td mat-cell *matCellDef="let row">{{row.telefone_residencial}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="telefone_cormecial">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>telefone comercial</th>
+      <td mat-cell *matCellDef="let row">{{row.telefone_cormecial}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="telefone_celular">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>telefone celular</th>
+      <td mat-cell *matCellDef="let row">{{row.telefone_celular}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="ramal">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Ramal</th>
+      <td mat-cell *matCellDef="let row">{{row.ramal}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cep">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>cep</th>
+      <td mat-cell *matCellDef="let row">{{row.cep}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="uf">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>cep</th>
+      <td mat-cell *matCellDef="let row">{{row.uf}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>cep</th>
+      <td mat-cell *matCellDef="let row">{{row.estado}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cidade">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>cep</th>
+      <td mat-cell *matCellDef="let row">{{row.cidade}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="endereco_residencial">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>endereco_residencial</th>
+      <td mat-cell *matCellDef="let row">{{row.endereco_residencial}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="bloco">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>endereco_residencial</th>
+      <td mat-cell *matCellDef="let row">{{row.bloco}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="complemento">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>complemento</th>
+      <td mat-cell *matCellDef="let row">{{row.complemento}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource?.data?.length"
+      [pageIndex]="0"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 50]">
+  </mat-paginator>
+</div>

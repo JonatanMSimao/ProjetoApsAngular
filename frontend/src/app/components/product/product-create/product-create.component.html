@@ -1,0 +1,68 @@
+<mat-card>
+   <mat-card-title>Cadastro Funcionario</mat-card-title>
+   <form>
+      <mat-form-field>
+          <input matInput placeholder="Nome Funcionario"
+              [(ngModel)]="product.nome" name="nome">
+      </mat-form-field>
+      <mat-form-field>
+         <input matInput placeholder=" Nº registro"
+             [(ngModel)]="product.numero_registro" name="numero_registro">
+     </mat-form-field>
+      <mat-form-field>
+         <input matInput placeholder="Email:"
+             [(ngModel)]="product.email" name="email">
+     </mat-form-field>
+     <mat-form-field>
+      <input matInput placeholder="telefone residencial:"
+          [(ngModel)]="product.telefone_residencial" name="telefone_residencial">
+  </mat-form-field>
+  <mat-form-field>
+   <input matInput placeholder="telefone comercial"
+       [(ngModel)]="product.telefone_cormecial" name="telefone_cormecial">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="Nº celular"
+       [(ngModel)]="product.telefone_celular" name="telefone_celular">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="Ramal"
+       [(ngModel)]="product.ramal" name="ramal">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="Cep"
+       [(ngModel)]="product.cep" name="cep">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="UF"
+       [(ngModel)]="product.uf" name="uf">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="Estado"
+       [(ngModel)]="product.estado" name="estado">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="Cidade"
+       [(ngModel)]="product.cidade" name="cidade">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="endereço residencial"
+       [(ngModel)]="product.endereco_residencial" name="endereco_residencial">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="Nº/bloco/Aptº "
+       [(ngModel)]="product.bloco" name="bloco">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="complemento"
+       [(ngModel)]="product.complemento" name="complemento">
+</mat-form-field>
+  </form>
+   <button mat-raised-button (click)="CreateProduct()" color="primary">
+      Salvar
+   </button>
+
+   <button mat-raised-button (click)="Cancel()">
+      Cancelar
+   </button>
+</mat-card>

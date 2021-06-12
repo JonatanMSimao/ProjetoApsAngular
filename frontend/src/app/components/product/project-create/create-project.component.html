@@ -1,0 +1,44 @@
+<mat-card>
+   <mat-card-title >Cadastrar Projeto</mat-card-title>
+   <form>
+      <mat-form-field>
+          <input matInput placeholder="Código" type="number"
+              [(ngModel)]="project.codigo" name="codigo">
+      </mat-form-field>
+      <mat-form-field>
+         <input matInput placeholder="Nome do Projeto"
+             [(ngModel)]="project.nome_projeto" name="nome_projeto">
+     </mat-form-field>
+      <mat-form-field>
+         <input matInput placeholder="Data de Inicío" type="date"
+             [(ngModel)]="project.data_inicio" name="data_inicio">
+     </mat-form-field>
+     <mat-form-field>
+      <input matInput placeholder="Data Prevista Término" type="date"
+          [(ngModel)]="project.data_prevista_termino" name="data_prevista_termino">
+  </mat-form-field>
+  <mat-form-field>
+   <input matInput placeholder="Data Término Real" type="date"
+       [(ngModel)]="project.data_termino_real" name="data_termino_real">
+</mat-form-field>
+  <mat-form-field>
+   <input matInput placeholder="Status"
+       [(ngModel)]="project.status" name="status">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="Número de Horas Prevista" type="time"
+       [(ngModel)]="project.numero_horas_prevista" name="numero_horas_prevista">
+</mat-form-field>
+<mat-form-field>
+   <input matInput placeholder="Numero de Horas Reais" type="time"
+       [(ngModel)]="project.numero_horas_reais" name="numero_horas_reais">
+</mat-form-field>
+  </form>
+   <button mat-raised-button (click)="CreateProduct()" color="primary">
+      Salvar
+   </button>
+
+   <button mat-raised-button (click)="Cancel()">
+      Cancelar
+   </button>
+</mat-card>

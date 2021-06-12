@@ -1,0 +1,30 @@
+<mat-card>
+   <mat-card-title>Cadastro Equipe</mat-card-title>
+   <form>
+      <mat-form-field>
+         <input matInput placeholder="Nº Registro"
+             [(ngModel)]="team.registro" name="registro">
+     </mat-form-field>
+      
+     <mat-form-field>
+          <input matInput placeholder="Nome das equipes"
+              [(ngModel)]="team.nome_equipes" name="nome_equipes">
+      </mat-form-field>
+
+      <mat-form-field>
+         <input matInput placeholder="Integrantes"
+             [(ngModel)]="team.integrantes" name="integrantes">
+     </mat-form-field>
+      <mat-form-field>
+         <input matInput placeholder=" Nº recurso"
+             [(ngModel)]="team.numero_recurso" name="numero_recurso">
+     </mat-form-field>
+  </form>
+   <button mat-raised-button (click)="CreateProduct()" color="primary">
+      Salvar
+   </button>
+
+   <button mat-raised-button (click)="Cancel()">
+      Cancelar
+   </button>
+</mat-card>
